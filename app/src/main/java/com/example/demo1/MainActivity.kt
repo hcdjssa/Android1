@@ -1,7 +1,9 @@
 package com.example.demo1
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -21,8 +23,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun myClickHandler(view: View) {
-        var dialIntent : Intent = Intent(Intent.ACTION_DIAL)
-        startActivity(dialIntent)
+        Log.i("MainActivity","button clicked")
+        //var dialIntent : Intent = Intent(Intent.ACTION_DIAL)
+        //startActivity(dialIntent)
+        var webIntent:Intent=Intent(Intent.ACTION_VIEW, Uri.parse("http://www.youtube.com"))
+        startActivity(webIntent)
 
     }
 }
