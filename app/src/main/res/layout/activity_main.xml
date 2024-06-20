@@ -17,7 +17,7 @@
         android:layout_marginBottom="27dp"
         android:ems="10"
         android:inputType="text"
-        android:hint="Name"
+        android:hint="@string/hint_name"
         app:layout_constraintBottom_toTopOf="@+id/editTextNumberPassword"
         app:layout_constraintStart_toStartOf="@+id/editTextNumberPassword" />
 
@@ -25,7 +25,7 @@
         android:id="@+id/editTextNumberPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Enter Passcode"
+        android:hint="@string/enter_passcode"
         android:layout_marginStart="47dp"
         android:layout_marginTop="227dp"
         android:ems="10"
