@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<string name="hint_name">பெயரை உள்ளிடுக</string>
+<string name="enter_passcode">பின்னை உள்ளிடவும்</string>
+</resources>
