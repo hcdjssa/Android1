@@ -3,6 +3,7 @@ package com.example.demo1
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.provider.AlarmClock
 import android.util.Log
 import android.view.View
 import androidx.activity.enableEdgeToEdge
@@ -26,8 +27,20 @@ class MainActivity : AppCompatActivity() {
         Log.i("MainActivity","button clicked")
         //var dialIntent : Intent = Intent(Intent.ACTION_DIAL)
         //startActivity(dialIntent)
-        var webIntent:Intent=Intent(Intent.ACTION_VIEW, Uri.parse("http://www.youtube.com"))
-        startActivity(webIntent)
+        //var webIntent:Intent=Intent(Intent.ACTION_VIEW, Uri.parse("http://www.youtube.com"))
+        //startActivity(webIntent)
+        createAlarm("hi",0,52);
 
+    }
+
+    fun createAlarm(message: String, hour: Int, minutes: Int) {
+        val intent = Intent(AlarmClock.ACTION_SET_ALARM).apply {
+            putExtra(AlarmClock.EXTRA_MESSAGE, message)
+            putExtra(AlarmClock.EXTRA_HOUR, hour)
+            putExtra(AlarmClock.EXTRA_MINUTES, minutes)
+        }
+       // if (intent.resolveActivity(packageManager) != null) {
+            startActivity(intent)
+       // }
     }
 }
