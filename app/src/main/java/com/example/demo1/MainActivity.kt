@@ -29,7 +29,10 @@ class MainActivity : AppCompatActivity() {
         //startActivity(dialIntent)
         //var webIntent:Intent=Intent(Intent.ACTION_VIEW, Uri.parse("http://www.youtube.com"))
         //startActivity(webIntent)
-        createAlarm("hi",0,52);
+        //createAlarm("hi",0,52);
+        var hIntent=Intent(this,HomeActivity::class.java)
+        hIntent.putExtra("nkey","Shiva")
+        startActivity(hIntent)
 
     }
 
